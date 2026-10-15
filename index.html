@@ -17,16 +17,24 @@
             background-color: #0F172A;
             color: #F8FAFC;
         }
+        /* Forzar texto claro en encabezados y etiquetas */
+        h1, h2, h3, h4, h5, h6, label {
+            color: #FFFFFF !important;
+        }
+        p, .text-muted-custom {
+            color: #CBD5E1 !important;
+        }
         .text-orange {
-            color: #F97316;
+            color: #F97316 !important;
         }
         .bg-orange {
-            background-color: #F97316;
-            color: #FFFFFF;
+            background-color: #F97316 !important;
+            color: #FFFFFF !important;
+            border: none;
         }
         .bg-orange:hover {
-            background-color: #EA580C;
-            color: #FFFFFF;
+            background-color: #EA580C !important;
+            color: #FFFFFF !important;
         }
         .card-custom {
             background-color: #1E293B;
@@ -35,8 +43,21 @@
         }
         .badge-scarcity {
             background-color: rgba(249, 115, 22, 0.15);
-            color: #F97316;
+            color: #F97316 !important;
             border: 1px solid #F97316;
+        }
+        /* Corrección de inputs y formularios */
+        .form-control, .form-select {
+            background-color: #0F172A !important;
+            color: #FFFFFF !important;
+            border: 1px solid #475569 !important;
+        }
+        .form-control::placeholder {
+            color: #94A3B8 !important;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #F97316 !important;
+            box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.25) !important;
         }
     </style>
 </head>
@@ -66,7 +87,7 @@
                 <h1 class="fw-extrabold display-4 mb-3">
                     Pone a tu negocio en la <span class="text-orange">conversación digital</span> de la ciudad
                 </h1>
-                <p class="lead text-slate-300 mb-4 fs-5" style="color: #94A3B8;">
+                <p class="lead mb-4 fs-5">
                     Impulsamos restaurantes, tiendas y emprendimientos de Comayagua con videos verticales de alto impacto para TikTok, Reels y Shorts. Totalmente gratis en tu primer video.
                 </p>
                 
@@ -79,32 +100,32 @@
     </section>
 
     <!-- Sección de Pasos Simples -->
-    <section class="py-5 bg-slate-900" style="background-color: #0B1120;">
+    <section class="py-5" style="background-color: #0B1120;">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">¿Cómo funciona para tu comercio?</h2>
-                <p style="color: #94A3B8;">3 pasos sencillos para digitalizar tu producto estrella</p>
+                <p class="text-muted-custom">3 pasos sencillos para digitalizar tu producto estrella</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card card-custom p-4 text-center h-100">
                         <div class="fs-1 text-orange mb-3"><i class="fa-solid fa-clipboard-list"></i></div>
                         <h5 class="fw-bold">1. Te Registras</h5>
-                        <p class="small text-slate-400" style="color: #94A3B8;">Llenas el formulario rápido indicando el nombre de tu comercio y tu producto principal.</p>
+                        <p class="small text-muted-custom mb-0">Llenas el formulario rápido indicando el nombre de tu comercio y tu producto principal.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-custom p-4 text-center h-100">
                         <div class="fs-1 text-orange mb-3"><i class="fa-solid fa-camera-retro"></i></div>
                         <h5 class="fw-bold">2. Grabamos y Editamos</h5>
-                        <p class="small text-slate-400" style="color: #94A3B8;">Producimos un Reel/TikTok profesional optimizado para la audiencia local de Comayagua.</p>
+                        <p class="small text-muted-custom mb-0">Producimos un Reel/TikTok profesional optimizado para la audiencia local de Comayagua.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-custom p-4 text-center h-100">
                         <div class="fs-1 text-orange mb-3"><i class="fa-solid fa-chart-line"></i></div>
                         <h5 class="fw-bold">3. Atraes Clientes</h5>
-                        <p class="small text-slate-400" style="color: #94A3B8;">Publicas el contenido en tus redes y mides el incremento en ventas y mensajes en tiempo real.</p>
+                        <p class="small text-muted-custom mb-0">Publicas el contenido en tus redes y mides el incremento en ventas y mensajes en tiempo real.</p>
                     </div>
                 </div>
             </div>
@@ -118,22 +139,22 @@
                 <div class="card card-custom p-4 p-md-5 shadow">
                     <div class="text-center mb-4">
                         <h3 class="fw-bold">Registra tu Negocio</h3>
-                        <p class="small" style="color: #94A3B8;">Aprovecha uno de los 100 cupos sin costo para comercios de Comayagua.</p>
+                        <p class="small text-muted-custom">Aprovecha uno de los 100 cupos sin costo para comercios de Comayagua.</p>
                     </div>
                     
-                    <!-- Formulario directo a WhatsApp -->
+                    <!-- Formulario -->
                     <form action="https://formspree.io/f/xbjnqrrr" method="POST">
                         <div class="mb-3">
                             <label class="form-label small fw-semibold">Nombre del Propietario / Encargado</label>
-                            <input type="text" name="nombre" class="form-control bg-dark text-white border-secondary" placeholder="Ej. Carlos Mendoza" required>
+                            <input type="text" name="nombre" class="form-control" placeholder="Ej. Carlos Mendoza" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label small fw-semibold">Nombre del Comercio</label>
-                            <input type="text" name="negocio" class="form-control bg-dark text-white border-secondary" placeholder="Ej. Cafetería Colonial" required>
+                            <input type="text" name="negocio" class="form-control" placeholder="Ej. Cafetería Colonial" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label small fw-semibold">Tipo de Negocio</label>
-                            <select name="rubro" class="form-select bg-dark text-white border-secondary">
+                            <select name="rubro" class="form-select">
                                 <option value="Restaurante/Gastronomía">Restaurante / Gastronomía</option>
                                 <option value="Tienda/Ropa">Tienda de Ropa / Calzado</option>
                                 <option value="Estética/Barbería">Estética / Barbería</option>
@@ -143,7 +164,7 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label small fw-semibold">Número de WhatsApp de Contacto</label>
-                            <input type="tel" name="whatsapp" class="form-control bg-dark text-white border-secondary" placeholder="+504 9999-9999" required>
+                            <input type="tel" name="whatsapp" class="form-control" placeholder="+504 9999-9999" required>
                         </div>
                         <button type="submit" class="btn bg-orange w-100 fw-bold py-3 rounded-pill">
                             <i class="fa-solid fa-paper-plane me-2"></i> Solicitud de Video Gratis
@@ -163,10 +184,10 @@
                 <a href="#" class="text-white me-3 fs-4"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://wa.me/50400000000" class="text-white fs-4"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <p class="small mb-1" style="color: #64748B;">
+            <p class="small mb-1 text-muted-custom">
                 <strong>Viraliza Comayagua</strong> &copy; 2026 - Todos los derechos reservados.
             </p>
-            <p class="small text-muted" style="font-size: 0.75rem;">
+            <p class="small text-muted-custom" style="font-size: 0.75rem;">
                 Proyecto de Aceleración Comercial e Innovación Digital · Carrera de Administración de Empresas - UNAH
             </p>
         </div>
